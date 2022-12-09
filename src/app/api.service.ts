@@ -11,4 +11,7 @@ export class ApiService {
   userRegister=(data:any)=>{
     return this.http.post("http://localhost:8080/registration",data)
   }
+  userSign=(data:any)=>{
+    return this.http.post("http://localhost:8080/signin",data)
+  }
 }
