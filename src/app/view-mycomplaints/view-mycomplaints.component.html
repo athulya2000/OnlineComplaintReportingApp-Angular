@@ -1,0 +1,20 @@
+<app-nav-barprofile></app-nav-barprofile>
+<div class="container">
+    <div class="row g-3">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <div class="row g-3">
+                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3" *ngFor="let i of Data">
+                    <div class="card" style="height:20rem">
+                        <img height="200px" src="https://media.getlokalapp.com/cache/0f/0e/0f0e87e3b0f3d4b6a961d1587e8c10d3.webp" class="card-img-top" alt="..."> 
+                        <div class="card-body">
+                            <button type="button" class="btn btn-primary">
+                                My Complaints <span class="badge text-bg-secondary">!</span>
+                              </button>
+                          <p class="card-text">{{i.complaints}}</p>
+                          
+                          
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>

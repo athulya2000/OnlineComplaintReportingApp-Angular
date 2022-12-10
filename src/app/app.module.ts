@@ -15,6 +15,7 @@ import { NavBarprofileComponent } from './nav-barprofile/nav-barprofile.componen
 import { AdminNavbarComponent } from './admin-navbar/admin-navbar.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AddComplaintsComponent } from './add-complaints/add-complaints.component';
+import { ViewMycomplaintsComponent } from './view-mycomplaints/view-mycomplaints.component';
 
 const myRoute:Routes=[
   {
@@ -40,6 +41,10 @@ const myRoute:Routes=[
   {
     path:"complaints",
     component:AddComplaintsComponent
+  },
+  {
+    path:"viewmycomplaints",
+    component:ViewMycomplaintsComponent
   }
 
 ]
@@ -56,6 +61,7 @@ const myRoute:Routes=[
     AdminNavbarComponent,
     DashboardComponent,
     AddComplaintsComponent,
+    ViewMycomplaintsComponent,
     
   ],
   imports: [

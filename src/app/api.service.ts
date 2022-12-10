@@ -20,4 +20,7 @@ export class ApiService {
   addComplaints=(add:any)=>{
     return this.http.post("http://localhost:8080/addcomplaints",add)
   }
+  viewMycomplaints=(my:any)=>{
+    return this.http.post("http://localhost:8080/viewmycomplaints",my)
+  }
 }
