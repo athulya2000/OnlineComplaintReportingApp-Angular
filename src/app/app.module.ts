@@ -16,6 +16,7 @@ import { AdminNavbarComponent } from './admin-navbar/admin-navbar.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AddComplaintsComponent } from './add-complaints/add-complaints.component';
 import { ViewMycomplaintsComponent } from './view-mycomplaints/view-mycomplaints.component';
+import { ViewAllcomplaintsComponent } from './view-allcomplaints/view-allcomplaints.component';
 
 const myRoute:Routes=[
   {
@@ -45,6 +46,10 @@ const myRoute:Routes=[
   {
     path:"viewmycomplaints",
     component:ViewMycomplaintsComponent
+  },
+  {
+    path:"viewall",
+    component:ViewAllcomplaintsComponent
   }
 
 ]
@@ -62,6 +67,7 @@ const myRoute:Routes=[
     DashboardComponent,
     AddComplaintsComponent,
     ViewMycomplaintsComponent,
+    ViewAllcomplaintsComponent,
     
   ],
   imports: [
