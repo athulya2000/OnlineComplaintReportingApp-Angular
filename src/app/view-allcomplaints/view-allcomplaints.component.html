@@ -1,0 +1,34 @@
+<app-admin-navbar></app-admin-navbar>
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <table class="table table-striped text-centre">
+                <thead>
+                  <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Email Id</th>
+                    <th scope="col">Phone Number</th>
+                    <th scope="col">Complaints</th>
+                    
+                    
+                    
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let i of viewall ">
+                    
+                    <td>{{i.name}}</td>
+                    <td>{{i.emailid}}</td>
+                    <td>{{i.phoneno}}</td>
+                    <td>{{i.complaints}}</td>
+                    
+                  </tr>
+                 
+                </tbody>
+              </table>
+        </div>
+    </div>
+</div>
+
+
+

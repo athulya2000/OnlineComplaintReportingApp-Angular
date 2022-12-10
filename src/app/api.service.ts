@@ -23,4 +23,7 @@ export class ApiService {
   viewMycomplaints=(my:any)=>{
     return this.http.post("http://localhost:8080/viewmycomplaints",my)
   }
+  viewAllcomplaints=()=>{
+    return this.http.get("http://localhost:8080/viewall")
+  }
 }
