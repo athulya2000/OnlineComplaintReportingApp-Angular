@@ -14,6 +14,7 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
 import { NavBarprofileComponent } from './nav-barprofile/nav-barprofile.component';
 import { AdminNavbarComponent } from './admin-navbar/admin-navbar.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { AddComplaintsComponent } from './add-complaints/add-complaints.component';
 
 const myRoute:Routes=[
   {
@@ -35,7 +36,12 @@ const myRoute:Routes=[
   {
     path:"dashboard",
     component:DashboardComponent
+  },
+  {
+    path:"complaints",
+    component:AddComplaintsComponent
   }
+
 ]
 
 @NgModule({
@@ -49,6 +55,7 @@ const myRoute:Routes=[
     NavBarprofileComponent,
     AdminNavbarComponent,
     DashboardComponent,
+    AddComplaintsComponent,
     
   ],
   imports: [
