@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { ApiService } from '../api.service';
 
 @Component({
@@ -14,7 +15,7 @@ export class UserRegistrationComponent {
   emailid=""
  password=""
 
- constructor(private api:ApiService){}
+ constructor(private api:ApiService,private route:Router){}
 
  readValues=()=>{
   let data:any={"name":this.name,"address":this.address,"phoneno":this.phoneno,"dob":this.dob,"emailid":this.emailid,"password":this.password}
@@ -24,6 +25,13 @@ export class UserRegistrationComponent {
       console.log(response)
       if (response.status=="success") {
         alert("successfully registerd")
+        this.name=""
+        this.address=""
+        this.phoneno=""
+        this.dob=""
+        this.emailid=""
+        this.password=""
+        this.route.navigate(['/signin'])
       } else {
         alert("something went wrong")
       }
