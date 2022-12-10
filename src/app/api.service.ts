@@ -14,4 +14,7 @@ export class ApiService {
   userSign=(data:any)=>{
     return this.http.post("http://localhost:8080/signin",data)
   }
+  viewProfile=(data:any)=>{
+    return this.http.post("http://localhost:8080/viewprofile",data)
+  }
 }

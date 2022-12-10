@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { ApiService } from '../api.service';
 
 @Component({
@@ -12,20 +13,23 @@ export class UserSigninComponent {
 
   searchUser:any=[]
 
-  constructor(private api:ApiService){}
+  constructor(private api:ApiService,private route:Router){}
 
   readValues=()=>{
     let data:any={"emailid":this.emailid,"password":this.password}
     console.log(data)
     this.api.userSign(data).subscribe(
       (Response:any)=>{
-        console.log(Response)
-        if (Response.length==0) {
-          alert("invalid emial or password")
-          this.emailid=""
+        this.emailid=""
           this.password=""
+        if (Response.status=="success") {
+          let userId=Response.userId
+          console.log(userId)
+          localStorage.setItem("userInfo",userId)
+          this.route.navigate(['/profile'])
+          
         } else {
-          this.searchUser=Response
+          alert(Response.message)
           
         }
       }
